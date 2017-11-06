@@ -1,11 +1,11 @@
 {% extends "./templateUnbranded.html" %}
 
-{% block head %}
-  {% include "includes/head.html" %}
+{% block cookie_message %}
+  <!-- <p>{{cookieText | safe }}</p> -->
 {% endblock %}
 
-{% block cookie_message %}
-  <p>{{cookieText | safe }}</p>
+{% block head %}
+  {% include "includes/head.html" %}
 {% endblock %}
 
 {% block inside_header %}
@@ -52,6 +52,10 @@
 
   {% block lfa %}
     {% include "includes/webHome/lfa.html" %}
+  {% endblock %}
+
+  {% block probtree %}
+    {% include "includes/webHome/problemDiagram.html" %}
   {% endblock %}
 
   {% block about %}
