@@ -1,0 +1,78 @@
+{% extends "./templateUnbranded.html" %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block cookie_message %}
+  <p>{{cookieText | safe }}</p>
+{% endblock %}
+
+{% block inside_header %}
+
+{% endblock %}
+
+
+{% block body_start %}
+  <div class="header-proposition container">
+    <div class="content">
+      <!-- <a href="#proposition-links" class="js-header-toggle menu">Menu</a> -->
+      <nav id="proposition-menu">
+        <a href="/" id="proposition-name">
+          <img src="/public/images/tardigraderLogo.png"/>
+        </a>
+        <!--
+        <ul id="proposition-links">
+          <li><a href="url-to-page-1" class="active">Navigation item #1</a></li>
+          <li><a href="url-to-page-2">Navigation item #2</a></li>
+        </ul>
+        -->
+      </nav>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  {% block slider %}
+    {% include "includes/webHome/slider.html" %}
+  {% endblock %}
+
+  {% block topJumbo %}
+    {% include "includes/webHome/topJumbo.html" %}
+  {% endblock %}
+
+  {% block skills %}
+    {% include "includes/webHome/skills.html" %}
+  {% endblock %}
+
+
+  {% block vision %}
+    {% include "includes/webHome/vision.html" %}
+  {% endblock %}
+
+  {% block about %}
+    {% include "includes/webHome/about.html" %}
+  {% endblock %}
+
+  {% block team %}
+    {% include "includes/webHome/team.html" %}
+  {% endblock %}
+
+  <div class="container">
+    <div class="row">
+      <hr>
+    </div>
+  </div>
+
+  {% block footer %}
+    {% include "includes/webHome/footer.html" %}
+  {% endblock %}
+{% endblock %}
+
+{% block body_end %}
+  {% block scripts %}
+    {% include "includes/scripts.html" %}
+    {% block page_scripts %}{% endblock %}
+  {% endblock %}
+  <!-- GOV.UK Prototype kit {{releaseVersion}} -->
+{% endblock %}
